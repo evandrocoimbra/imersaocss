@@ -1,10 +1,15 @@
+* {
+  margin : 0;
+  padding: 0;
+}
 body {
     /* 
     background: #0b3462;
     */
-    background-image: url('../img/fundo.jpg');
+    background-image: url('../img/black-textile.jpg');
     background-size: auto 100vh;
     height: 100vh;
+    
  }
  
  .menu {
@@ -12,19 +17,19 @@ body {
  }
  
  .menu ul {
-   list-style: none;
-   font-size: 23px;
-   font-weight: bold;
-   height: 60px;
-   display: flex;
+    list-style: none;
+    font-size: 23px;
+    font-weight: bold;
+    height: 60px;
+    display: flex;
     justify-content: space-around;
  }
  
  .menu li {
-   padding: 20px; 
-   width: 30%;
-   margin: auto 0px;
-   text-align: center;
+    padding: 20px; 
+    width: 30%;
+    margin: auto 0px;
+    text-align: center;
  }
  
  
