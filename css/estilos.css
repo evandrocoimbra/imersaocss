@@ -59,7 +59,7 @@ body {
     font-weight: bold;
     height: 60px;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
  }
  
  .menu li {
@@ -74,14 +74,15 @@ body {
    text-decoration: none;
    color: black;
    display: block; /* senão não funciona o padding */
-   padding: 0px 20px;
-   
+   padding: 16px 40px;
+   transition: background-color 0.8s, color 0.5s;
  }
  
  .menu a:hover {
    text-decoration: none;
-   color: #888080;
-   font-size: 1.1em;
+   background-color: lightslategray;
+   color: whitesmoke;
+   /*font-size: 1.1em;*/
  }
  
  .site-subtitle,
@@ -91,9 +92,10 @@ body {
     font-size: 2.5em;
  }
  
- .portfolio {
+ .portfolio,
+ .contato  {
     padding: 2em;
-    height: 100vh;
+    min-height: 100vh;
  }
 
  .portfolio h2 {
@@ -104,7 +106,7 @@ body {
     display: grid;
     gap: 2em;
     text-align: center;
-    height: 70vh; 
+    min-height: 70vh; 
  }
 
  @media(min-width:550px){
@@ -119,12 +121,31 @@ body {
       justify-content: center;
    }
  }
- .img-portfolio {
+.img-portfolio {
     width: 240px;
     height: 240px;
     text-align: center;    
     object-fit: cover;
     object-position: top right;
     border-radius: 5px;
-    border: 1px solid;
- }
+    border: 1px solid #CCC;
+    transition: transform 500ms;
+}
+.img-portfolio:hover{
+   transform: scale(1.2) rotate(-1deg);
+}
+.contato .icons {
+   text-align: center;
+}
+.contato a {
+    font-size: 6em;
+    color: #CCCCCC;
+    text-decoration: none; 
+   transition: text-shadow 800ms;
+}
+
+.contato a:active,
+.contato a:hover{
+    color: white;
+    text-shadow: 3px 3px 10px rgba(255,255,255,.5);
+}
