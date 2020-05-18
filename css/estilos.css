@@ -87,7 +87,7 @@ body {
  }
 
  .titulo {
-    transform: scale(0.2) translateY(50vh);
+    transform: scale(1) translateX(100vw);
     opacity: 0;
 
     animation: linear 1.5s forwards animacaoTitulo;
@@ -95,7 +95,7 @@ body {
 
  @keyframes animacaoTitulo {
    100% {
-      transform: scale(1) translateY(0);
+      transform: scale(1) translateX(0);
       opacity: 1;
    }
  }
@@ -107,16 +107,33 @@ body {
     font-size: 2.5em;
  }
  
+ .sobre,
  .portfolio,
  .contato  {
     padding: 2em;
     min-height: 100vh;
  }
-
+ 
+ .sobre h2,
+ .contato h2,
  .portfolio h2 {
     margin-bottom: 1.5em;
  }
 
+ .sobre p {
+    color: whitesmoke;
+    text-indent: 2em;
+    margin-bottom: 1em;
+    text-align: justify;
+ }
+ .sobre a {
+    text-decoration: underline;
+    color: whitesmoke;
+ }
+ .sobre a:hover {
+    background-color: #CCCCCC; 
+    color: black;
+ }
  .portfolio .grid {
     display: grid;
     gap: 2em;
