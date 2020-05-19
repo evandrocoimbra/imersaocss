@@ -128,13 +128,21 @@ body {
  .contato h2,
  .portfolio h2 {
     margin-bottom: 1.5em;
+    margin-top: 1.5em;
  }
 
 .sobre img {
-   width: 280px;
+   width: 240px;
    height: auto;
-   float: right;
+   text-align: center;
+   clip-path: circle(50% at 50% 50%);
 
+}
+@media (min-width: 400px) {
+   .sobre img {
+      float: right;
+      clip-path: polygon(100% 0%, 86% 52%, 100% 100%, 25% 100%, 0% 50%, 25% 0%);
+   }
 }
 .sobre p {
     color: whitesmoke;
@@ -183,10 +191,35 @@ body {
     transition: transform 500ms;
 }
 
-.img-portfolio:hover{
+/*.img-portfolio:hover{
    transform: scale(1.2) rotate(-1deg);
 }
+*/
+.flip-card {
+   perspective: 500px;
+}
+.card {
+   position:relative;
+   transform-style: preserve-3d;
+   transition: transform 1s;
+}
+.card-front,
+.card-back {
+   backface-visibility: hidden;
+   position: absolute;
 
+}
+
+.card-back {
+  width: 240px;
+  height: 240px;
+  background-color: #CCC;
+  transform: rotateY(180deg);
+  text-color: #000;
+}
+.flip-card:hover .card{
+   transform: rotateY(180deg);
+}
 .contato .icons {
    text-align: center;
 }
