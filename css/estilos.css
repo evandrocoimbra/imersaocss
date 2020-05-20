@@ -164,7 +164,7 @@ body {
     display: grid;
     gap: 2em;
     text-align: center;
-    min-height: 70vh; 
+    min-height: 80vh; 
 }
 
 @media(min-width:550px){
@@ -181,8 +181,8 @@ body {
 }
 
 .img-portfolio {
-    width: 240px;
-    height: 240px;
+    width: 180px;
+    height: 180px;
     text-align: center;    
     object-fit: cover;
     object-position: top right;
@@ -196,26 +196,35 @@ body {
 }
 */
 .flip-card {
+   width: 180px;
+   height: 180px;
    perspective: 500px;
 }
 .card {
    position:relative;
    transform-style: preserve-3d;
    transition: transform 1s;
+   top: 0;
+   left:0;
 }
 .card-front,
 .card-back {
+   width: 180px;
+   height: 180px;   
    backface-visibility: hidden;
    position: absolute;
+   top:0;
+   left:0;
 
 }
 
 .card-back {
-  width: 240px;
-  height: 240px;
+   display: flex;
   background-color: #CCC;
   transform: rotateY(180deg);
-  text-color: #000;
+  color: #000;
+  align-items: center;
+  justify-content: center;
 }
 .flip-card:hover .card{
    transform: rotateY(180deg);
@@ -228,11 +237,11 @@ body {
     font-size: 6em;
     color: #CCCCCC;
     text-decoration: none; 
-   transition: text-shadow 800ms;
+   transition: text-shadow .5s;
 }
 
 .contato a:active,
 .contato a:hover{
-    color: white;
+    color: #EEE;
     text-shadow: 3px 3px 10px rgba(255,255,255,.5);
 }
